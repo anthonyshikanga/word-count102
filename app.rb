@@ -7,12 +7,10 @@ get('/') do
   erb(:index)
 end
 
-get('/wordcounter') do
+get('/results') do
   phrase = params.fetch('phrase')
-  special_word = params.fetch('special_word')
-
-  @counter=phrase.wordcounter(special_word)
-  @special_word= special_word
-
+  word = params.fetch('word')
+  @counter = phrase.wordcounter(word)
+  @word = word
   erb(:results)
  end

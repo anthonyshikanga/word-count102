@@ -13,6 +13,6 @@ get('/wordcounter') do
 
   @counter=phrase.wordcount(word)
   @word= word
+ end
 
-  erb(:results)
-end
+  

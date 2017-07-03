@@ -9,10 +9,10 @@ end
 
 get('/wordcounter') do
   phrase = params.fetch('phrase')
-  word = params.fetch('word')
+  special_word = params.fetch('special_word')
 
-  @counter=phrase.wordcount(word)
-  @word= word
+  @counter=phrase.wordcounter(special_word)
+  @special_word= special_word
+
+  erb(:results)
  end
-
-  

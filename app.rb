@@ -8,9 +8,8 @@ get('/') do
 end
 
 get('/results') do
-  phrase = params.fetch('phrase')
-  word = params.fetch('word')
-  @counter = phrase.wordcounter(word)
-  @word = word
+   word = params.fetch('word')
+  @phrase_word = params.fetch('word')
+  @counter = params.fetch('phrase').wordcounter(@phrase_word)
   erb(:results)
  end
